@@ -230,6 +230,7 @@ img {
   color: var(--white-color);
   background-color: var(--blue-color);
   cursor: pointer;
+  
 }
 /*скрыть заголовок*/
 .about-hero {
@@ -776,18 +777,17 @@ margin-right: 10px;
   visibility: visible;
   pointer-events: initial;
 
-  transition: visibility 250ms var(--cubik);
-  opacity: 1;
+  transition:opacity 250ms var(--cubik),
+  visibility 250ms var(--cubik);
 }
-.backdrop.is-hidden  {
+.backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform:translate(-50%, -50%) scale(0.7);
 }
 
 .backdrop.is-hidden .modal-wrapper {
-  transform:translate(-50%, -50%) scale(0.7);
+  transform: translate(-50%, -50%) scale(0.5);
 }
 
 .modal-wrapper{
@@ -798,7 +798,8 @@ margin-right: 10px;
   width: 528px;
   height: 581px;
 
-  transition: transform 250ms var(--cubik);
+  transition:250ms var(--cubik);
+  opacity: 1;
 
   transform: translate(-50%, -50%) scale(1);
   background:var(--white-color);
